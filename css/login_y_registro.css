@@ -1,0 +1,493 @@
+/*:root{
+    --color-principal:#591414;
+    --color-secundario:#8C1111;
+    --color-terciario:#A6242F;
+    --color-negro:#0D0908;
+    --color-crema:#A68A56;
+    --color-fondo:#E7E1E1;
+    --color-letra-pricipal: #fff;
+}*/
+
+/*
+font-family: 'Heebo', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Pacifico', cursive;
+*/
+
+/*:root{
+    --color-principal:#592723;
+    --color-secundario:#8C5535;
+    --color-terciario:#D99152;
+    --color-negro:#0D0908;
+    --color-crema:#BFAE99;
+    --color-fondo:#D7D9C7;
+    --color-letra-pricipal: #fff;
+}*/
+
+/*:root{
+    --color-principal:#400101;
+    --color-secundario:#F25F29;
+    --color-terciario:#F28B30;
+    --color-negro:#0D0908;
+    --color-crema:#3045BF;
+    --color-fondo:#F2F1F0;
+    --color-letra-pricipal: #fff;
+}*/
+
+:root{
+    --color-principal:#591414;
+    --color-secundario:#8C1111;
+    --color-terciario:#A6242F;
+    --color-negro:#0D0908;
+    --color-alternativo-I:#7D6841;
+    --color-alternativo-II:#3045BF;
+    --color-apuesto:#145959;
+    --color-fondo:#E7E1E1;
+    --color-letra-pricipal: #fff;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+
+main{
+    flex-grow: 1;
+    background: radial-gradient(circle, rgba(13,9,8,1) 0%, rgba(166,138,86,1) 100%);
+    min-height: 90vh;
+    display: grid;
+    place-content: center;
+    overflow: hidden;
+    padding: 20px 0px;
+}
+
+.login-registro{
+    position: relative;
+    width: 20rem;
+    height: 37rem;
+}
+
+.login-registro .container-form{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    height: 100%;
+    background-color: var(--color-letra-pricipal);
+    border-radius: .5rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.login-registro .container-form form .icono{
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+    color: var(--color-negro);
+}
+
+.login-registro .container-form form h2{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    color: var(--color-negro);
+}
+
+.login-registro .container-form form .container-input{
+    position: relative;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.login-registro .container-form form .container-input i,
+.login-registro .container-form form .container-input label{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: var(--color-principal);
+    padding: 0.5rem;
+    pointer-events: none;
+    transition: all .5s ease;
+}
+
+.login-registro .container-form form .container-input i{
+    left: 0.5rem;
+}
+
+.login-registro .container-form form .container-input label{
+    left: 2rem;
+    font-weight: bold;
+}
+
+.login-registro .container-form form .container-input input{
+    width: 100%;
+    height: 3.2rem;
+    padding: 0.4rem;
+    border-radius: 0.5em;
+    border: none;
+    outline: none;
+    border: 0.1rem solid var(--color-negro);
+    font-size: 1rem;
+    color: var(--color-negro);
+    background: transparent;
+}
+
+form .container-input input:focus~label,
+form .container-input input:valid~label,
+form .container-input input:focus~i,
+form .container-input input:valid~i{
+    top: 0 !important;
+    font-size: .9rem !important;
+    padding: 0 !important;
+    font-weight: bold;
+    background-color: var(--color-letra-pricipal);
+}
+
+.login-registro .container-form form .recordar-contra a{
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: bold;
+    transform: all .5s ease;
+}
+
+.login-registro .container-form form .recordar-contra a:hover{
+    color: var(--color-terciario);
+}
+
+.login-registro .container-form form .btn{
+    background-color: var(--color-principal);
+    color: var(--color-letra-pricipal);
+    font-weight: bold;
+    width: 100%;
+    height: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    outline: none;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 .1rem .5rem rgba(0, 0, 0, .4);
+}
+
+.login-registro .container-form form .link{
+    text-align: center;
+    font-size: 1rem;
+    color:var(--color-negro);
+    font-weight: bold;
+}
+
+.login-registro .container-form form .link a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--color-principal);
+    font-weight: bold;
+    transition: all .5s ease;
+}
+
+.login-registro .container-form form .link a:hover{
+    color: var(--color-secundario);
+}
+
+.login-registro .registro{
+    transform: rotate(7deg);
+}
+
+.login-registro.animacion-logueo .container-form.logueo{
+    animation: signin-flip 1s ease-in-out forwards;
+}
+
+@keyframes signin-flip {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-50rem) scale(1.1);
+    }
+
+    100% {
+        transform: translateX(0) rotate(7deg) scale(1);
+    }
+}
+
+.login-registro.animacion-logueo .container-form.registro{
+    animation: rotatecard .7s ease-in-out forwards;
+    animation-delay: .3s;
+}
+
+@keyframes rotatecard {
+    0% {
+        transform: rotate(7deg);
+    }
+
+    100% {
+        transform: rotate(0);
+        z-index: 1;
+    }
+}
+
+.login-registro.animacion-registro .container-form.registro{
+    animation: signup-flip 1s ease-in-out forwards;
+}
+
+@keyframes signup-flip {
+    0% {
+        transform: translateX(0);
+        z-index: 1;
+    }
+
+    50% {
+        transform: translateX(50rem) scale(1.1);
+    }
+
+    100% {
+        transform: translateX(0) rotate(7deg) scale(1);
+    }
+}
+
+.login-registro.animacion-registro .container-form.logueo{
+    transform: rotate(7deg);
+    animation: rotatecard .7s ease-in-out forwards;
+    animation-delay: .3s;
+}
+
+@keyframes rotatecard {
+    0% {
+        transform: rotate(7deg);
+    }
+
+    100% {
+        transform: rotate(0);
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 380px){
+    .login-registro{
+        width: 15rem;
+    }
+
+    .login-registro .container-form{
+        padding: 10px 20px;
+    }
+
+    .login-registro .container-form form h2{
+        font-size: 1.8rem;
+    }
+
+    .login-registro .container-form form .container-input i{
+        font-size: 0.9rem;
+    }
+
+    .login-registro .container-form form .container-input label{
+        font-size: 0.9rem;
+    }
+
+    form .container-input input:focus~label,
+    form .container-input input:valid~label,
+    form .container-input input:focus~i,
+    form .container-input input:valid~i{
+        font-size: .8rem !important;
+    }
+
+    .login-registro .container-form form .container-input i,
+    .login-registro .container-form form .container-input label{
+        padding: 0.3rem;
+    }
+
+    .login-registro .container-form form .recordar-contra a{
+        font-size: .8rem;
+    }
+
+    .login-registro .container-form form .btn{
+        font-size: 0.8rem;
+        margin: 1rem 0;
+    }
+
+    .login-registro .container-form form .link{
+        font-size: 0.8rem;
+    }
+
+    .login-registro .container-form form .link a{
+        font-size: 0.8rem;
+    }
+}
+
+/*MODAL REMEMBER CONTRASEÑA*/
+#btn-modal-remember{
+    display: none;
+}
+
+.contenedor-modal-remember{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--color-fondo-modal);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+#btn-modal-remember:checked ~ .contenedor-modal-remember{
+    display: flex;
+    transition: 0.2s linear;
+}
+
+.contenedor-modal-remember .contenido-modal{
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--color-fondo);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.contenedor-modal-remember .cerrar-modal{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.contenido-modal .header-modal{
+    width: 100%;
+    padding: 10px 15px;
+    background-color: var(--color-principal);
+    color: var(--color-letra-pricipal);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.contenido-modal .header-modal h2{
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contenido-modal .header-modal label i{
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.contenido-modal .cuerpo-de-modal{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 0px 15px;
+}
+
+.cuerpo-de-modal .input-servidor{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin: 10px 0px;
+    width: 100%;
+}
+
+.cuerpo-de-modal .input-servidor label{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-family: 'Heebo', sans-serif;
+}
+
+.cuerpo-de-modal .input-servidor .input-principales{
+    width: 100%;
+    font-weight: 700;
+}
+
+.cuerpo-de-modal .input-servidor .input-style{
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid var(--color-principal);
+    padding: 7px 10px;
+}
+
+.cuerpo-de-modal .input-servidor .input-radio label{
+    margin-left: 10px;
+}
+
+.contenido-modal .btns{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 15px 15px 15px;
+}
+
+.contenido-modal .btns .agregar{
+    width: 45%;
+    border-radius: 15px;
+    border: none;
+    padding: 5px 15px;
+    background-color: var(--color-alternativo-II);
+    color: var(--color-letra-pricipal);
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Heebo', sans-serif;
+}
+
+.contenido-modal .btns .agregar:hover{
+    background-color: var(--color-principal);
+    transition: 0.2s linear;
+}
+
+.contenido-modal .btns .resetear{
+    width: 45%;
+    border-radius: 15px;
+    border: none;
+    padding: 5px 15px;
+    background-color: var(--color-apuesto);
+    color: var(--color-letra-pricipal);
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Heebo', sans-serif;
+}
+
+.contenido-modal .btns .resetear:hover{
+    background-color: var(--color-principal);
+    transition: 0.2s linear;
+}
+
+@media screen and (max-height: 555px) {
+    /*MODAL REMEMBER CONTRASEÑA*/
+    .contenedor-modal-remember .contenido-modal{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    /*MODAL REMEMBER CONTRASEÑA*/
+    .contenedor-modal-remember .contenido-modal .header-modal h2{
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+
+    .contenedor-modal-remember .cuerpo-de-modal .input-servidor label{
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-bottom: 5px;
+        font-family: 'Heebo', sans-serif;
+    }
+}
