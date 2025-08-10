@@ -52,4 +52,5 @@ Como parte de la **Tecnicatura Universitaria en Desarrollo de Software** en **UP
 
 ## 📬 Contacto
 
-📧 maxi.soriano.70.23@gmail.com
+📧 Email: [maxi.soriano.70.23@gmail.com](mailto:maxi.soriano.70.23@gmail.com)  
+🔗 LinkedIn: [linkedin.com/in/maximilianosoriano](https://www.linkedin.com/in/maximiliano-soriano/)
